@@ -23,7 +23,6 @@ import {faSyncAlt}  from '@fortawesome/free-solid-svg-icons';
 function App() {
     const theme = useSelector(selectTheme);
     const convertTemperature = useSelector(selectTemperatureUnit);
-    console.log(convertTemperature)
     const dispatch = useDispatch();
 
 
@@ -55,7 +54,6 @@ function App() {
 
 
             <div className='container'>
-                <span>Current Theme: {theme}</span>
                 <h1>WEATHER</h1>
                 <Locations/>
             </div>
