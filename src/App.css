@@ -23,13 +23,54 @@ h1, h3{
   }
 }
 
-/* On screens that are 600px wide or less, the background color is olive */
-@media screen and (max-width: 1300px) {
+
+@media screen and (min-width: 750px)  and (max-width: 1300px) {
   .container {
     width: 90%;
     margin: 0 auto;
   }
+  h1, h3, span, button {
+    font-size: 35px!important;
+  }
 
+  .popup {
+    padding-top: 30%;
+  }
+
+  .delete-city{
+    font-size: 50px!important;
+  }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 749px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  h1, h3, span, button {
+    font-size: 25px!important;
+  }
+  .line:after{
+    height: 22px!important;
+    border-right: 2px solid white!important;
+  }
+  .icon {
+    width: 20px!important;
+    margin-left: 10px!important;
+  }
+  .bg-button {
+    width: 25px!important;
+    height: 25px!important;
+  }
+  .delete-city{
+    font-size: 45px!important;
+  }
+}
+
+.icon {
+  width: 35px;
+  margin-left: 35px;
 }
 
 .menu{
@@ -83,6 +124,9 @@ h1, h3{
   outline: none;
 }
 
+.menu-btn.active {
+  color: #0873ff;
+}
 
 
 .menu-btn:hover{

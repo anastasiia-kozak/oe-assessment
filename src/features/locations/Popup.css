@@ -19,10 +19,15 @@
     background-color: rgb(8,115,255, 0.53); /* Black w/ opacity */
 }
 
+.popup.active {
+    display: block;
+}
+
+
 .vertical-align-center{
     margin: auto;
     background: #ffffff;
-    width: 40%;
+    width: 52%;
     height: 40%;
     padding: 40px;
     border-radius: 30px;
@@ -53,18 +58,52 @@ input{
     padding: 20px;
     border-radius: 30px;
     border: none;
-    font-size: 30px;
+    font-size: 30px!important;
     color: #fff;
     margin-right: 40px;
     outline: none;
+    width: 230px;
+    margin-bottom: 20px
 }
 
-.pinkie{
-    color: white;
-    background: rgb(8,115,255);
-}
-
-.purple {
-    border: 1px solid rgb(8,115,255);
+.border-btn{
     color: rgb(8,115,255);
+    background: white;
+    border: 1px solid rgb(8,115,255);
+}
+
+.fill-btn{
+    background: rgb(8,115,255);
+    color: white;
+    border: 1px solid rgb(8,115,255);
+}
+
+.border-btn:hover{
+    border: 1px solid rgb(8,115,255);
+    box-shadow: 0px 4px 9px 0px rgb(199 220 249);
+}
+
+.fill-btn:hover{
+    box-shadow: 0px 4px 9px 0px rgb(199 220 249);
+}
+
+@media screen and (min-width: 750px)  and (max-width: 1300px) {
+    .popup {
+        padding-top: 18%!important;
+    }
+    .vertical-align-center{
+        width: 75% !important;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .popup {
+        padding-top: 30%!important;
+    }
+    .vertical-align-center{
+        width: 75% !important;
+    }
+    .popup-btn:first-child{
+      width: 70%;
+    }
 }

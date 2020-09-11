@@ -25,7 +25,8 @@ export const actionFetchLocationWeather = createAsyncThunk('locations/actionFetc
     return {
         id,
         temp: weather.main.temp,
-        city: weather.name
+        city: weather.name,
+        icon: weather.weather[0].icon
     };
 });
 
@@ -39,7 +40,9 @@ export const actionRefreshLocationWeather = createAsyncThunk('locations/actionRe
         .then(response => response.json());
     return {
         id,
-        temp: weather.main.temp
+        temp: weather.main.temp,
+        icon: weather.weather[0].icon
+
     };
 });
 
@@ -55,14 +58,15 @@ export const locationsSlice = createSlice({
         },
         actionAddPendingLocation: {
             reducer: (state, action) => {
-                const {id, zip, status, temp} = action.payload;
-                state.items.push({id, zip, status, temp});
+                const {id, zip, status, temp, icon} = action.payload;
+                state.items.push({id, zip, status, temp, icon});
             },
             prepare: (id, zip) => {
                 return {
                     payload: {
                         id,
                         zip,
+                        icon: null,
                         temp: null,
                         city: null,
                         status: LOCATION_STATUS_PENDING
@@ -73,13 +77,14 @@ export const locationsSlice = createSlice({
     },
     extraReducers: {
         [actionFetchLocationWeather.fulfilled]: (state, action) => {
-            const {id, temp, city} = action.payload;
+            const {id, temp, icon, city} = action.payload;
             const location = state.items.find(value => value.id === id);
 
             if (location) {
                 location.status = LOCATION_STATUS_FULFILLED;
                 location.temp = temp;
                 location.city = city;
+                location.icon = icon
             }
         },
         [actionFetchLocationWeather.rejected]: (state, action) => {
