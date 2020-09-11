@@ -20,7 +20,7 @@ export const actionRefreshAllLocationsWeather = () => (dispatch, getState) => {
 
 export const actionFetchLocationWeather = createAsyncThunk('locations/actionFetchLocationWeather', async (payload) => {
     const {id, zip} = payload;
-    const weather = await (fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=2a4b026a6e0dc1c5b25d4f46f6ce634c&units=imperial`))
+    const weather = await (fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=2a4b026a6e0dc1c5b25d4f46f6ce634c&units=imperial`))
         .then(response => response.json());
     return {
         id,
@@ -36,7 +36,7 @@ export const actionFetchLocationWeather = createAsyncThunk('locations/actionFetc
  */
 export const actionRefreshLocationWeather = createAsyncThunk('locations/actionRefreshWeatherById', async (payload) => {
     const {id, zip} = payload;
-    const weather = await (fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=2a4b026a6e0dc1c5b25d4f46f6ce634c&units=imperial`))
+    const weather = await (fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=2a4b026a6e0dc1c5b25d4f46f6ce634c&units=imperial`))
         .then(response => response.json());
     return {
         id,

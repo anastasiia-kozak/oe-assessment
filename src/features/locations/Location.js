@@ -28,7 +28,7 @@ export function Location(props) {
                 <div className="weather" alt={'weather'}>
                     {location.status === LOCATION_STATUS_PENDING && <span alt={'loading-icon'} style={{position: 'absolute', marginLeft: '-40px'}}><FontAwesomeIcon size={'xs'} spin={true} icon={faSyncAlt}/></span>}
                     <h3>{location.zip}: {location.city}</h3>
-                    <img alt='weather-icon' src={`http://openweathermap.org/img/wn/${location.icon}@2x.png`}/>
+                    <img alt='weather-icon' src={`https://openweathermap.org/img/wn/${location.icon}@2x.png`}/>
                     <span>{convertUnit()} {temperatureUnit}</span>
                     <button className='menu-btn delete-city' onClick={() => dispatch(actionRemoveLocation(location.id))} >X</button>
                 </div> :
