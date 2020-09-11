@@ -9,6 +9,10 @@ h1, h3{
   margin: 0px;
 }
 
+button{
+  cursor: pointer;
+}
+
 ::placeholder {
   color: rgb(8,115,255,0.53);
   font-size: 35px;
