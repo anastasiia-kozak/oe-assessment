@@ -1,0 +1,126 @@
+.App{
+  background: linear-gradient(-135deg, #81D9E5, #AE90FF);
+  background-repeat: no-repeat;
+  height: 100VH;
+  color: #fff;
+}
+
+h1, h3{
+  margin: 0px;
+}
+
+::placeholder {
+  color: rgb(8,115,255,0.53);
+  font-size: 35px;
+  font-weight: 400;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (min-width: 1301px) {
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+}
+
+.menu{
+  padding: 30px 0;
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.bg-button{
+  height: 50px;
+  width: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 18px;
+  outline: none;
+}
+
+.bg-button:hover{
+   border: 2px solid #0873ff
+ }
+
+.bg-button.active{
+  border: 2px solid #0873ff
+}
+
+.blue-gradient {
+  background: linear-gradient(-135deg, #81D9E5, #AE90FF);
+  background-repeat: no-repeat;
+}
+
+.purple-gradient{
+  background: linear-gradient(-135deg, #9343FF, #FB9A93);
+  background-repeat: no-repeat;
+}
+
+.orange-gradient{
+  background: linear-gradient(-135deg, #FBAB7E, #F7CE68);
+  background-repeat: no-repeat;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 50px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  outline: none;
+}
+
+
+
+.menu-btn:hover{
+  color: #0873ff;
+}
+
+.line:after{
+  content: " ";
+  display: inline-block;
+  padding-right: 20px;
+  height: 40px;
+  border-right: 3px solid white;
+}
+
+.weather-block{
+  margin-top: 40px;
+}
+
+.weather{
+  position: relative;
+  font-size: 50px;
+  border: 1px solid #fff;
+  border-radius: 30px ;
+  padding: 25px 50px;
+  display: flex;
+  align-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-city{
+  position: absolute;
+  right: -9px;
+  top: -20px;
+}
+
+.delete-city:hover {
+  color: #0873ff;
+}

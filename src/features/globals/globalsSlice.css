@@ -1,0 +1,14 @@
+.blue-gradient {
+    background: linear-gradient(-135deg, #81D9E5, #AE90FF);
+    background-repeat: no-repeat;
+}
+
+.purple-gradient{
+    background: linear-gradient(-135deg, #9343FF, #FB9A93);
+    background-repeat: no-repeat;
+}
+
+.orange-gradient{
+    background: linear-gradient(-135deg, #FBAB7E, #F7CE68);
+    background-repeat: no-repeat;
+}

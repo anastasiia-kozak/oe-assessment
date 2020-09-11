@@ -1,0 +1,21 @@
+.delete-city{
+    position: absolute;
+    right: -12px;
+    top: -20px;
+}
+
+.delete-city:hover{
+    color: #0873ff;
+}
+
+.line:after{
+    content: " ";
+    display: inline-block;
+    padding-right: 20px;
+    height: 40px;
+    border-right: 3px solid white;
+}
+
+/*Header ends */
+
+
